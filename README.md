@@ -6,8 +6,8 @@ EZmap is a Bash script designed for network enumeration, providing a streamlined
 
 ## Features
 
-- **Multi-Host Mode:** Perform network discovery on a specified IP range, scanning multiple hosts.
 - **Single-Host Mode:** Scan a single specified IP address for detailed information.
+- **Multi-Host Mode:** Perform network discovery on a specified IP range, scanning multiple hosts.
 - **Automatic Port Scanning:** Utilize Nmap for comprehensive port scanning.
 - **Service Identification:** Run service scans to identify running services on open ports.
 - **Vulnerability Detection:** Identify potential vulnerabilities using Nmap scripts.
