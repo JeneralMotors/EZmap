@@ -10,4 +10,5 @@ This Bash script performs initial and detailed scans using Nmap, a powerful netw
   sudo apt-get install nmap
 
 ## Usage
-  sudo ./nmap_script.sh <ip>
+  ```bash
+  sudo ezmap <ip>
