@@ -1,28 +1,30 @@
 #!/bin/bash
 
-# Check if the script is running with UID 0 (root)
-if [ "$(id -u)" -ne 0 ]; then
-    echo "This script must be run as root. Exiting..."
-    exit 1
-fi
-
-# Check if an IP address is provided as an argument
-if [ -z "$1" ]; then
-    echo "Usage: $0 <ip>"
-    echo "Example: $0 192.168.1.1"
-    exit 1
-fi
-
-# Hide cursor
-tput civis
 
 # Color variables for console output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
-CYAN='\033[0;36m'
+CYAN='\033[0;36m' 
+ORANGE='\033[0;33m'
 # Reset colors
 NC='\033[0m'
+
+# Check if the script is running with UID 0 (root)
+if [ "$(id -u)" -ne 0 ]; then
+    printf "\n${ORANGE}This script must be run as root. Exiting...${NC}\n\n"
+    exit 1
+fi
+
+# Check if an IP address is provided as an argument
+if [ -z "$1" ]; then
+    printf "\n${ORANGE}Usage: $0 <ip>${NC}\n"
+    printf "${ORANGE}Example: $0 192.168.1.1${NC}\n\n"
+    exit 1
+fi
+
+# Hide cursor
+tput civis
 
 # Assign the provided IP address to a variable
 ip=$1
