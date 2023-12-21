@@ -65,7 +65,7 @@ cat $(pwd)/nmap/services | grep -P '^\d+\/\w+' | awk '{print $1, substr($0, inde
 printf "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 
 # Display the services file
-printf "\n${GREEN}[+]${NC} Possible ${BLUE}CVE's${NC} and ${BLUE}CNVD's${NC}\n\n"
+printf "\n${GREEN}[+]${NC} ${RED}POSSIBLE${NC} ${BLUE}CVE's${NC} and ${BLUE}CNVD's${NC}\n\n"
 cat $(pwd)/nmap/services | grep -oP 'CVE-\d{4}-\d+|CNVD-\d{4}-\d+' | uniq | sort
 
 # Show cursor
